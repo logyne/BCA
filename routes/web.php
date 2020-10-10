@@ -24,7 +24,7 @@ Route::get('/users/{id}/{user}', function ($id,$user) {
     return 'This is the  user '.$id.'and his id'.$user;
 });*/
 Route::get('/', function () {
-    return '<h1>Hello World!</h1>';
+    return '<h1>Hello kady!</h1>';
 });
 
 /*Route::get('/about', function () {
