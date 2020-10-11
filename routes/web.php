@@ -13,22 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/' ,'PagesController@index');
-//Route::get('/about','PagesController@services');
-//Route::get('/service' ,'PagesController@about');
-/*
-Route::get('/users/{id}', function ($id) {
-    return 'This is user '.$id;
-});
-Route::get('/users/{id}/{user}', function ($id,$user) {
-    return 'This is the  user '.$id.'and his id'.$user;
-});*/
 Route::get('/', function () {
-    return '<h1>Hello kady!</h1>';
+    return view('welcome');
 });
 
-/*Route::get('/about', function () {
-    return view('Pages.about');
-});*///
-//Route::get('/' ,'Pagecontroller@index');
 
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
